@@ -13,7 +13,6 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-
 import com.UPBCanteen.security.jwt.AuthEntryPointJwt;
 import com.UPBCanteen.security.jwt.AuthTokenFilter;
 import com.UPBCanteen.security.services.UserDetailsServiceImpl;
@@ -23,8 +22,8 @@ import javax.servlet.Filter;
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(
-        // securedEnabled = true,
-        // jsr250Enabled = true,
+         securedEnabled = true,
+         jsr250Enabled = true,
         prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
